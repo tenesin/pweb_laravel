@@ -89,7 +89,7 @@
         <h1>Ishaq Yudha</h1>
         <p>Web Developer & Designer</p>
         <div class="cards">
-            <a href="{{ url('/about') }}" class="card about">
+            <a href="{{ url('/tugas') }}" class="card about">
                 <i class="fas fa-user"></i>
                 <p class="tip">tugas</p>
                 <p class="second-text">Klik untuk ke "/tugas"</p>

@@ -45,7 +45,7 @@
     <header class="bg-white shadow-sm">
         <div class="max-w-5xl mx-auto px-4 py-4">
             <div class="flex items-center justify-between">
-                <h2 class="text-2xl font-bold gradient-text">Blog MalasNgoding</h2>
+                <a href="/"><h2 class="text-2xl font-bold gradient-text">Blog MalasNgoding</h2></a>
                 
                 <!-- Hamburger Menu for Mobile -->
                 <button id="menu-toggle" class="md:hidden text-gray-600 hover:text-indigo-600 focus:outline-none focus:text-indigo-600">

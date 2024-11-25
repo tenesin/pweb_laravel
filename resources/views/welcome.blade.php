@@ -94,10 +94,10 @@
                 <p class="tip">tugas</p>
                 <p class="second-text">Klik untuk ke "/tugas"</p>
             </a>
-            <a href="{{ url('/education') }}" class="card education">
+            <a href="{{ url('/pegawai') }}" class="card education">
                 <i class="fas fa-graduation-cap"></i>
-                <p class="tip">Education</p>
-                <p class="second-text">My academic journey</p>
+                <p class="tip">Pegawai</p>
+                <p class="second-text">Go To Pegawai</p>
             </a>
             <a href="{{ url('/skills') }}" class="card skills">
                 <i class="fas fa-cogs"></i>

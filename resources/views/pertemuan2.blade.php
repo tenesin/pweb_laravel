@@ -13,8 +13,8 @@
     <title>Beranda - Pemrograman Web</title>
     <style>
         body {
-            background: linear-gradient(135deg, #ff7f50, #ff6347, #ffa07a);
-            color: #ffccff;
+            background-color: #ffffff;
+            color: black;
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
@@ -64,12 +64,11 @@
 <body>
     <h1>Selamat Datang People</h1>
     <p>
-        General Manager of Barunastra ITS 2024, I Made Vibra Dananjaya, revealed that the 12th INAMARINE event became a potential event to strengthen collaboration with the maritime industry. This is because Barunastra returned to appear for the third time in Asia's leading shipping exhibition. “Barunastra is the only research team among students to showcase our innovative work,” said Vibra.
-    </p>
+        Banyubramanta is an underwater robot team from the Sepuluh Nopember Institute of Technology (ITS). Since 2018, we have been developing robots with brilliant and innovative ideas to keep pushing forward. Our main focus is inspired by submarine robots, ocean exploration, and underwater resources, aiming to develop Remotely Operated Vehicles (ROVs) and Autonomous Underwater Vehicles (AUVs). The development of these robots continues to facilitate research and industry, enabling exploration of the deepest parts of the ocean. Up to now, the Banyubramanta team actively participates in and wins robot contests in national and international competitions.    </p>
     <p>
-        Being a team with many innovations, Vibra explained that this year’s INAMARINE was also a showcase for their innovative work in the form of the Nala Proteus 0.2 autonomous ship. The ship has been equipped with a sophisticated system for ocean clean-up missions. Thanks to these advantages, Nala Proteus 0.2 has won various prestigious events, including the International Roboboat Competition (IRC) last February.
+        
     </p>
-    <img src="https://www.its.ac.id/news/wp-content/uploads/sites/2/2024/08/Tim-Barunastra-ITS-turut-berpartisipasi-di-ajang-INAMARINE-2024-di-JIExpo-Kemayoran-Kota-Jakarta-1.jpg" 
+    <img src="https://arek.its.ac.id/banyubramanta/assets/images/robot/10.png" 
          alt="Tim Barunastra ITS" class="centered-img">
 
     <div class="button-group">

@@ -99,10 +99,10 @@
                 <p class="tip">Pegawai</p>
                 <p class="second-text">Go To Pegawai</p>
             </a>
-            <a href="{{ url('/skills') }}" class="card skills">
+            <a href="{{ url('/flashdisk') }}" class="card skills">
                 <i class="fas fa-cogs"></i>
-                <p class="tip">Skills</p>
-                <p class="second-text">What I can do</p>
+                <p class="tip">Flashdisk</p>
+                <p class="second-text">Go To Flashdisk</p>
             </a>
             <a href="{{ url('/experience') }}" class="card experience">
                 <i class="fas fa-briefcase"></i>

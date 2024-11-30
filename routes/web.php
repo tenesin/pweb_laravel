@@ -7,6 +7,9 @@ use App\Http\Controllers\DosenController;
 use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\TugasController;
+use App\Http\Controllers\FlashdiskController;
+
+
 
 // Default welcome route
 Route::get('/', function () {
@@ -48,6 +51,15 @@ Route::get('/pegawai/edit/{id}',[PegawaiController::class, 'edit']);
 Route::post('/pegawai/update',[PegawaiController::class, 'update']);
 Route::get('/pegawai/hapus/{id}',[PegawaiController::class, 'hapus']);
 Route::get('/pegawai/cari',[PegawaiController::class, 'cari']);
+
+// Route Flashdisk
+Route::get('/flashdisk', [FlashdiskController::class, 'index']);
+Route::get ('/flashdisk/tambah', [FlashdiskController::class, 'tambah']);
+Route::post('/flashdisk/store',[FlashdiskController::class, 'store']);
+Route::get('/flashdisk/edit/{id}',[FlashdiskController::class, 'edit']);
+Route::post('/flashdisk/update',[FlashdiskController::class, 'update']);
+Route::get('/flashdisk/hapus/{id}',[FlashdiskController::class, 'hapus']);
+Route::get('/flashdisk/cari',[FlashdiskController::class, 'cari']);
 
 
 // Route Formulir

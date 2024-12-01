@@ -30,8 +30,8 @@
             <label for="tersedia" class="col-sm-2 col-form-label">Tersedia</label>
             <div class="col-sm-10">
               <select name="tersedia" id="tersedia" class="form-control" required>
-                <option value="y" {{ $f->tersedia == 'y' ? 'selected' : '' }}>Ya</option>
-                <option value="n" {{ $f->tersedia == 'n' ? 'selected' : '' }}>Tidak</option>
+                <option value="y" {{ $f->tersedia == 'y' ? 'selected' : '' }}>Y</option>
+                <option value="n" {{ $f->tersedia == 'n' ? 'selected' : '' }}>N</option>
               </select>
             </div>
         </div>

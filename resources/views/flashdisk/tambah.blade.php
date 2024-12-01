@@ -35,8 +35,8 @@
             <label for="tersedia" class="col-sm-2 col-form-label">Tersedia</label>
             <div class="col-sm-10">
                 <select name="tersedia" class="form-control" id="tersedia" required="required">
-                    <option value="y">Yes</option>
-                    <option value="n">No</option>
+                    <option value="y">Y</option>
+                    <option value="n">N</option>
                 </select>
             </div>
         </div>

@@ -9,6 +9,12 @@
     <a href="/flashdisk" class="btn btn-secondary">
         Ke Halaman Flashdisk
     </a>
+    <a href="/uas" class="btn btn-danger">
+        Ke Halaman UAS
+    </a>
+    <a href="/pagecounter" class="btn btn-success">
+        Ke Halaman Page Counter
+    </a>
 @endsection
 
 @section('konten')

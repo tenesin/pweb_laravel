@@ -8,6 +8,7 @@ use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\TugasController;
 use App\Http\Controllers\FlashdiskController;
+use App\Http\Controllers\PageController;
 
 
 
@@ -77,3 +78,6 @@ Route::get('/tugas/pertemuan7', [TugasController::class, 'pertemuan7']);
 
 Route::get('/input', [MalasngodingController::class, 'input']); 
 Route::post('/proses', [MalasngodingController::class, 'proses']);
+
+// Route pagecounter
+Route::get('/pagecounter', [PageController::class, 'incrementCounter']);

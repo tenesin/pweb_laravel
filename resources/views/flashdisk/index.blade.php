@@ -5,6 +5,11 @@
 @section('link1')
     <a href="/flashdisk/tambah" class="btn btn-primary">+ Tambah Flashdisk Baru</a>
     <a href="/pegawai" class="btn btn-secondary">Ke Halaman Pegawai</a>
+    <a href="/uas" class="btn btn-danger">Ke Halaman UAS</a>
+    <a href="/pagecounter" class="btn btn-success">
+        Ke Halaman Page Counter
+    </a>
+
 @endsection
 
 @section('konten')

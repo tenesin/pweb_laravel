@@ -15,13 +15,13 @@ class PageController extends Controller
                 DB::table('pagecounter')->insert(['count' => 1]);
                 return 1;
             }
-            
+
             $newCount = $counter->count + 1;
             DB::table('pagecounter')->update(['count' => $newCount]);
             
             return $newCount;
         });
 
-        return view('pagecounter', compact('result'));
+        return view('pagecounter', compact('hasil'));
     }
 }

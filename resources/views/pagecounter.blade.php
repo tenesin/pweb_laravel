@@ -1,6 +1,6 @@
 @extends('template')
 
-@section('tulisan1', 'Data Pegawai')
+@section('tulisan1', 'Halaman Page Counter')
 
 @section('link1')
     <a href="/pegawai" class="btn btn-primary">
@@ -17,9 +17,9 @@
     </a>
 @endsection
 
-@section ('konten')
+@section('konten')
   <div class="counter-container">
-    <h1>Page Visits: <span id="count" class="text-primary">{{ $hasil }}</span></h1>
+    <h1>Page Visits: <span id="count" class="text-primary">{{ $count }}</span></h1>
   </div>
+@endsection
 
- @endsection

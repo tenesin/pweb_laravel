@@ -9,8 +9,7 @@ use App\Http\Controllers\BlogController;
 use App\Http\Controllers\TugasController;
 use App\Http\Controllers\FlashdiskController;
 use App\Http\Controllers\PageController;
-
-
+use App\Http\Controllers\UjianController;
 
 // Default welcome route
 Route::get('/', function () {
@@ -80,4 +79,13 @@ Route::get('/input', [MalasngodingController::class, 'input']);
 Route::post('/proses', [MalasngodingController::class, 'proses']);
 
 // Route pagecounter
-Route::get('/pagecounter', [PageController::class, 'incrementCounter']);
+Route::get('/pagecounter', [PageController::class, 'updateAndRead']);
+
+
+
+// Route UAS
+Route::get('/uas', [UjianController::class, 'index']);
+Route::get ('/uas/tambahuas', [UjianController::class, 'tambah']);
+Route::post('/uas/store',[UjianController::class, 'store']);
+
+

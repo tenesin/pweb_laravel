@@ -9,15 +9,37 @@ class PegawaiController extends Controller
 {
     //
     public function index()
-    {
-    	// mengambil data dari table pegawai
-    	//$pegawai = DB::table('pegawai')->get(); //hasilnya adalah array 2D, ini langsung manggil nama table, kalo ga pake pagination pake ini pas eas, klo ada tombol box(?) pake get bkn pagination
-        $pegawai = DB::table('pegawai')->paginate(10) ; //jumlah yang dimunculkan perhalaman
+{
+    // Retrieve data from the 'nilaikuliah' table with pagination
+    $nilaikuliah = DB::table('nilaikuliah')->paginate(10);
 
-    	// mengirim data pegawai ke view index
-		return view('pegawai.index', ['pegawai' => $pegawai]);
+    // Loop through each record to calculate additional fields and statistics
+    foreach ($nilaikuliah as $item) {
+        // Calculate Nilai Huruf based on NilaiAngka
+        if ($item->NilaiAngka >= 85) {
+            $item->NilaiHuruf = 'A';
+        } elseif ($item->NilaiAngka >= 70) {
+            $item->NilaiHuruf = 'B';
+        } elseif ($item->NilaiAngka >= 55) {
+            $item->NilaiHuruf = 'C';
+        } elseif ($item->NilaiAngka >= 40) {
+            $item->NilaiHuruf = 'D';
+        } else {
+            $item->NilaiHuruf = 'E';
+        }
 
-    }
+        // Calculate Bobot (Nilai Angka * SKS)
+        $item->Bobot = $item->NilaiAngka * $item->SKS;
+	}
+    
+    // Return the data to the view
+    return view('uas', [
+        'nilaikuliah' => $nilaikuliah,
+		
+    ]);
+}
+
+
 
     // method untuk menampilkan view form tambah pegawai
 public function tambah()

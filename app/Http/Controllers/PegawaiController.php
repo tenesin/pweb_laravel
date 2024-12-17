@@ -15,18 +15,17 @@ class PegawaiController extends Controller
 
     // Loop through each record to calculate additional fields and statistics
     foreach ($nilaikuliah as $item) {
-        // Calculate Nilai Huruf based on NilaiAngka
-        if ($item->NilaiAngka >= 85) {
-            $item->NilaiHuruf = 'A';
-        } elseif ($item->NilaiAngka >= 70) {
-            $item->NilaiHuruf = 'B';
-        } elseif ($item->NilaiAngka >= 55) {
-            $item->NilaiHuruf = 'C';
-        } elseif ($item->NilaiAngka >= 40) {
-            $item->NilaiHuruf = 'D';
-        } else {
-            $item->NilaiHuruf = 'E';
-        }
+		// Calculate Nilai Huruf based on NilaiAngka
+		if ($item->NilaiAngka >= 81) {
+			$item->NilaiHuruf = 'A';
+		} elseif ($item->NilaiAngka >= 61 && $item->NilaiAngka <= 80) {
+			$item->NilaiHuruf = 'B';
+		} elseif ($item->NilaiAngka >= 41 && $item->NilaiAngka <= 60) {
+			$item->NilaiHuruf = 'C';
+		} else {
+			$item->NilaiHuruf = 'D';
+		}
+	
 
         // Calculate Bobot (Nilai Angka * SKS)
         $item->Bobot = $item->NilaiAngka * $item->SKS;

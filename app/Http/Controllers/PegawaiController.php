@@ -10,32 +10,11 @@ class PegawaiController extends Controller
     //
     public function index()
 {
-    // Retrieve data from the 'nilaikuliah' table with pagination
-    $nilaikuliah = DB::table('nilaikuliah')->paginate(10);
+    // mengambil data dari table pegawai
+		$pegawai = DB::table('pegawai')->paginate(10);
 
-    // Loop through each record to calculate additional fields and statistics
-    foreach ($nilaikuliah as $item) {
-		// Calculate Nilai Huruf based on NilaiAngka
-		if ($item->NilaiAngka >= 81) {
-			$item->NilaiHuruf = 'A';
-		} elseif ($item->NilaiAngka >= 61 && $item->NilaiAngka <= 80) {
-			$item->NilaiHuruf = 'B';
-		} elseif ($item->NilaiAngka >= 41 && $item->NilaiAngka <= 60) {
-			$item->NilaiHuruf = 'C';
-		} else {
-			$item->NilaiHuruf = 'D';
-		}
-	
-
-        // Calculate Bobot (Nilai Angka * SKS)
-        $item->Bobot = $item->NilaiAngka * $item->SKS;
-	}
-    
-    // Return the data to the view
-    return view('uas', [
-        'nilaikuliah' => $nilaikuliah,
-		
-    ]);
+		// mengirim data pegawai ke view index
+		return view('pegawai.index',['pegawai' => $pegawai]);
 }
 
 

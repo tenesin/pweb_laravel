@@ -9,32 +9,27 @@ class UjianController extends Controller
 {
     // Fungsi Index untuk menampilkan data dengan logika tambahan
     public function index()
-    {
-        // Retrieve all records with pagination
-        $nilaikuliah = DB::table('nilaikuliah')->paginate(10);
+{
+    // Retrieve data from the 'nilaikuliah' table with pagination
+    $nilaikuliah = DB::table('nilaikuliah')->paginate(10);
 
-        // Transform the data
-        $nilaikuliah->getCollection()->transform(function ($item) {
-            $item->NilaiHuruf = $this->calculateNilaiHuruf($item->NilaiAngka);
-            $item->Bobot = $item->NilaiAngka * $item->SKS;
-            return $item;
-        });
-
-        return view('uas', ['nilaikuliah' => $nilaikuliah]);
-    }
-
-    private function calculateNilaiHuruf($nilaiAngka)
-    {
-        if ($nilaiAngka <= 40) {
-            return 'D';
-        } elseif ($nilaiAngka <= 60) {
-            return 'C';
-        } elseif ($nilaiAngka <= 80) {
-            return 'B';
-        } else {
-            return 'A';
-        }
-    }
+    // Loop through each record to calculate additional fields and statistics
+    foreach ($nilaikuliah as $item) {
+        // Determine Nilai Huruf
+        $item->NilaiHuruf = $item->NilaiAngka >= 81 ? 'A' :
+                            ($item->NilaiAngka >= 61 ? 'B' :
+                            ($item->NilaiAngka >= 41 ? 'C' : 'D'));
+    
+        // Calculate Bobot
+        $item->Bobot = $item->NilaiAngka * $item->SKS;
+    }    
+    
+    // Return the data to the view
+    return view('uas', [
+        'nilaikuliah' => $nilaikuliah,
+		
+    ]);
+}
 
 
     // Fungsi Tambah untuk menampilkan form tambah data
